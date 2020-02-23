@@ -1,5 +1,7 @@
 <template>
-  <Layout>Main Page</Layout>
+  <Layout>
+    <h1>Main page</h1>
+  </Layout>
 </template>
 
 <script>
@@ -8,7 +10,10 @@ export default {
     title: "Masažo salonas Kaune"
   }
 };
-</script>
+</script >
 
-<style>
+<style lang="scss" scoped>
+h1 {
+  color: $testVariable;
+}
 </style>
