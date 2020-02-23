@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <header class="header"></header>
+  <div>
+    <Header />
     <slot />
   </div>
 </template>
@@ -12,6 +12,17 @@ query {
   }
 }
 </static-query>
+
+<script>
+import Header from "@/components/Header/Header.vue";
+
+export default {
+  name: "Layout",
+  components: {
+    Header
+  }
+};
+</script>
 
 <style>
 </style>
