@@ -1,13 +1,21 @@
 <template>
   <Layout>
-    <h1>Main page</h1>
+    <Hero />
+    <Decoration />
   </Layout>
 </template>
 
 <script>
+import Hero from "@/components/Hero/Hero.vue";
+import Decoration from "@/components/Decoration/Decoration.vue";
+
 export default {
   metaInfo: {
     title: "Masažo salonas Kaune"
+  },
+  components: {
+    Hero,
+    Decoration
   }
 };
 </script >
