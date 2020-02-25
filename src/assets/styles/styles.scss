@@ -1,9 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-size: 16px;
-  background: #F3F3E7;
+  background:  $light-sand;
 }
 
 .container {
@@ -13,4 +21,25 @@ body {
 
 .flex {
   display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.f-row {
+  flex-direction: row;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.header-h2 {
+  font-size: 2rem;
+  margin-top: 5.7rem;
 }

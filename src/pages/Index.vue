@@ -1,13 +1,15 @@
 <template>
-  <Layout>
-    <Hero />
-    <Decoration />
-  </Layout>
+  <!-- <Layout> -->
+  <!-- <Hero /> -->
+  <!-- <Decoration /> -->
+  <ServicesSection />
+  <!-- </Layout> -->
 </template>
 
 <script>
 import Hero from "@/components/Hero/Hero.vue";
 import Decoration from "@/components/Decoration/Decoration.vue";
+import ServicesSection from "@/components/ServicesSection/ServicesSection.vue";
 
 export default {
   metaInfo: {
@@ -15,7 +17,8 @@ export default {
   },
   components: {
     Hero,
-    Decoration
+    Decoration,
+    ServicesSection
   }
 };
 </script >
