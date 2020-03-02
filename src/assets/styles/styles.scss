@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:300,400,700&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -12,6 +14,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   background:  $light-sand;
+  font-family: $font-primary;
 }
 
 .container {
@@ -27,6 +30,10 @@ body {
   justify-content: center;
 }
 
+.j-flex-end {
+  justify-content: flex-end;
+}
+
 .a-center {
   align-items: center;
 }
@@ -40,6 +47,8 @@ body {
 }
 
 .header-h2 {
-  font-size: 2rem;
+  font-size: $font-x-large;
   margin-top: 5.7rem;
+  font-family: $font-secondary;
+  font-weight: $font-bold;
 }

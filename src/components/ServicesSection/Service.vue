@@ -76,9 +76,10 @@ export default {
 }
 
 h3 {
+  font-family: $font-secondary;
+  font-size: $font-large;
+  font-weight: $font-light;
   color: $dark-brown;
-  font-size: 1.62rem;
-  font-weight: 200;
   text-align: center;
   margin: 5.5rem 0 0 0;
 }
@@ -86,6 +87,8 @@ h3 {
 p {
   text-align: center;
   color: $dark-sand;
+  font-size: $font-small;
+  line-height: 2;
   padding: 0 1.1rem;
 }
 </style>

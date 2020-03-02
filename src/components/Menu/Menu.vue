@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="container flex">
+    <ul class="flex j-flex-end a-center container">
       <li v-for="item in items" :key="item.name">
         <a href>{{item.name}}</a>
       </li>
@@ -34,8 +34,6 @@ ul {
   width: 100%;
   height: 100%;
   padding: 0;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 li {
@@ -48,9 +46,10 @@ a {
   padding: 0 0.5rem;
   display: block;
   text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font-family: $font-secondary;
+  font-weight: $font-bold;
   color: $dark-grey;
+  text-transform: uppercase;
   &:hover {
     opacity: 0.6;
   }

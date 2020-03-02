@@ -1,9 +1,9 @@
 <template>
-  <!-- <Layout> -->
-  <!-- <Hero /> -->
-  <!-- <Decoration /> -->
-  <ServicesSection />
-  <!-- </Layout> -->
+  <Layout>
+    <Hero />
+    <Decoration />
+    <ServicesSection />
+  </Layout>
 </template>
 
 <script>

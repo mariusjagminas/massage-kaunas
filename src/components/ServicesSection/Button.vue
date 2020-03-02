@@ -17,9 +17,9 @@ export default {
 <style lang="scss" scoped>
 a {
   text-decoration: none;
+  font-family: $font-secondary;
+  font-weight: $font-regular;
   color: $white;
-  font-size: 1.1rem;
-  font-weight: 600;
   background: $brown;
   padding: 0.75rem 2.2rem;
   border-radius: 1.9rem;

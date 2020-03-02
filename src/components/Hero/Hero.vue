@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <div class="flex inner-container">
+    <div class="flex j-flex-end a-center inner-container">
       <h1>
         Gydomasis ir Relaksinis
         <br />Masazas
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .hero {
   width: 100%;
   height: 600px;
@@ -26,15 +26,14 @@ export default {
 .inner-container {
   width: 100%;
   height: 100%;
-  justify-content: flex-end;
-  align-items: center;
   background: rgba(243, 243, 231, 0.2);
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 40px;
-  width: 490px;
-  margin-right: 100px;
+  font-family: $font-secondary;
+  font-size: $font-xx-large;
+  color: $white;
+  width: 30.6rem;
+  margin-right: 6.2rem;
 }
 </style>
