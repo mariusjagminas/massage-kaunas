@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="flex top-section">
+    <div class="top-section">
       <Logo :size="87" />
     </div>
     <Decoration />
@@ -26,6 +26,6 @@ export default {
 <style  lang="scss" scoped>
 .top-section {
   padding: 0.8rem 0;
-  justify-content: center;
+  @include flex(center);
 }
 </style>

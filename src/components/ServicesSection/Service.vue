@@ -1,13 +1,10 @@
 <template>
-  <div class="flex wrap j-center service">
-    <div
-      class="flex j-center a-center circle"
-      :style="{'background-image': 'url('+ $props.serviceData.image +')'}"
-    ></div>
+  <div class="service">
+    <div class="circle" :style="{'background-image': 'url('+ $props.serviceData.image +')'}"></div>
     <div class="service-container">
       <div class="ornament"></div>
       <h3>{{$props.serviceData.title}}</h3>
-      <p>{{$props.serviceData.content}}</p>
+      <p class="text-feature">{{$props.serviceData.content}}</p>
     </div>
     <Button text="Placiau" />
   </div>
@@ -30,20 +27,21 @@ export default {
 
 <style lang="scss" scoped>
 .service {
+  @include flex(center);
+  flex-wrap: wrap;
   position: relative;
   max-width: 21.3rem;
-  margin-top: 10rem;
   margin: 10rem 0 4.3rem 0;
   @media (min-width: $mobile-up) {
-    margin: 10rem 0.8rem 4.3rem 0.8rem;
+    margin: 10rem rem(10) 4.3rem rem(10);
   }
 }
 
 .service-container {
   height: 25rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: rem(35);
   position: relative;
-  background: $sand;
+  background: $color-background;
 }
 
 .circle-wrapper {
@@ -51,6 +49,7 @@ export default {
 }
 
 .circle {
+  @include flex(center, center);
   position: absolute;
   top: -7.2rem;
   z-index: 100;
@@ -75,20 +74,17 @@ export default {
   height: 3.43rem;
 }
 
-h3 {
-  font-family: $font-secondary;
-  font-size: $font-large;
-  font-weight: $font-light;
-  color: $dark-brown;
-  text-align: center;
-  margin: 5.5rem 0 0 0;
-}
-
+h3,
 p {
   text-align: center;
-  color: $dark-sand;
-  font-size: $font-small;
-  line-height: 2;
-  padding: 0 1.1rem;
+  padding: rem(4) rem(15);
+}
+
+h3 {
+  font-family: $font-family-header;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-light;
+  color: $color-header;
+  margin: 5.5rem 0 0 0;
 }
 </style>

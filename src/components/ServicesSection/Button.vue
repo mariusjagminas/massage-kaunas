@@ -17,11 +17,11 @@ export default {
 <style lang="scss" scoped>
 a {
   text-decoration: none;
-  font-family: $font-secondary;
-  font-weight: $font-regular;
-  color: $white;
-  background: $brown;
-  padding: 0.75rem 2.2rem;
+  font-family: $font-family-header;
+  font-weight: $font-weight-regular;
+  color: $color-light;
+  background: $color-button;
+  padding: 0.75rem 2.3rem;
   border-radius: 1.9rem;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);

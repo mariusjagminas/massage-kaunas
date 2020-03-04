@@ -2,7 +2,7 @@
   <div class="service-section">
     <h2 class="header-h2">Paslaugos</h2>
     <p>atliekame ivairias masazo rusys</p>
-    <div class="flex j-center wrap">
+    <div class="wrapper">
       <Service v-for="data in serviceData" :key="data.title" :serviceData="data" />
     </div>
   </div>
@@ -45,7 +45,8 @@ export default {
 
 <style lang="scss" scoped>
 .service-section {
-  min-height: 1060px;
+  min-height: rem(1060);
+  background-color: $color-light-background;
 }
 
 h2,
@@ -55,14 +56,12 @@ p {
 }
 
 p {
-  font-size: $font-regular-large;
-  color: $dark-sand;
   padding: 0 1.5rem;
-  margin: 2.3rem 0 2rem 0;
+  margin: rem(36) 0 rem(11) 0;
 }
 
-h2 {
-  color: $dark-brown;
-  text-transform: uppercase;
+.wrapper {
+  @include flex(center);
+  flex-wrap: wrap;
 }
 </style>

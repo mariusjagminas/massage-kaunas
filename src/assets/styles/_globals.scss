@@ -1,28 +1,50 @@
-$white: #ffffff;
-
-$light-grey:  #e6e5d9;
-$dark-grey: #707070;
-
+// Colors 
 $light-sand: #FCFCF7;
-$sand:#F6F6E9;
-$dark-sand: #AC9D8E;
+$sand: #F6F6E9;
+$green: #9DC74E;
+$grey: #E6E5D9;
+$brown: #37251B;
+$brown-red:  #D77D31;
+$light-brown: #AC9D8E;
 
-$brown: #D77D31;
-$dark-brown: #37251B;
+// Theme
+$color-light: #ffffff;
+$color-background: $sand;
+$color-light-background: $light-sand;
+$color-logo: $green;
+$color-menu-background: $grey;
+$color-menu-text: darken($grey,50%);
+$color-header: $brown;
+$color-text: lighten($brown, 45%);
+$color-button: $brown-red;
 
-$font-primary: 'Courgette', sans-serif;
-$font-secondary:  "Open Sans", sans-serif;
+// Fonts
+$font-family-text: 'Courgette', sans-serif;
+$font-family-header:  "Open Sans", sans-serif;
 
-$font-light: 300;
-$font-regular: 400;
-$font-bold: 700;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
 
-$font-small: 0.88rem;// 14px
-$font-regular-large: 1.2rem; // 18px
-$font-large: 1.63rem; // 26px
-$font-x-large: 1.88rem; // 30px
-$font-xx-large: 2.5rem; // 40px
+$font-size: 16;
+$font-size-base: $font-size + px; // 16px
+$font-size-h1: 2.5rem; // 40px
+$font-size-h2: 1.63rem; // 26px
+$font-size-h3: 1.2rem; // 18px
+$font-size-feature: 0.88rem;// 14px
 
+// Mixins
+@mixin flex($justify-content: default, $align-items: default, $direction: row){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items
+}
+
+//Functions
+@function rem($px){
+  @return ($px/$font-size)+rem;
+}
 
 // Media queries
 $mobile-up: 400px;

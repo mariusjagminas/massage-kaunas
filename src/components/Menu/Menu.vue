@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="flex j-flex-end a-center container">
+    <ul class="container">
       <li v-for="item in items" :key="item.name">
         <a href>{{item.name}}</a>
       </li>
@@ -26,14 +26,15 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  background-color: $light-grey;
-  height: 69px;
+  background-color: $color-menu-background;
+  height: 4.31rem;
 }
 
 ul {
   width: 100%;
   height: 100%;
   padding: 0;
+  @include flex(flex-end, center);
 }
 
 li {
@@ -46,9 +47,9 @@ a {
   padding: 0 0.5rem;
   display: block;
   text-decoration: none;
-  font-family: $font-secondary;
-  font-weight: $font-bold;
-  color: $dark-grey;
+  font-family: $font-family-header;
+  font-weight: $font-weight-bold;
+  color: $color-menu-text;
   text-transform: uppercase;
   &:hover {
     opacity: 0.6;

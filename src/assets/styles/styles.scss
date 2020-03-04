@@ -2,6 +2,9 @@
 
 html {
   box-sizing: border-box;
+  font-family: $font-family-text;
+  font-size: $font-size-base;
+  line-height: 1.5;
 }
 
 *, *:before, *:after {
@@ -11,10 +14,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
-  font-size: 16px;
-  background:  $light-sand;
-  font-family: $font-primary;
+  background: $color-background;
+  color: $color-text;
 }
 
 .container {
@@ -22,33 +23,19 @@ body {
   margin: 0 auto;
 }
 
-.flex {
-  display: flex;
-}
-
-.j-center {
-  justify-content: center;
-}
-
-.j-flex-end {
-  justify-content: flex-end;
-}
-
-.a-center {
-  align-items: center;
-}
-
-.f-row {
-  flex-direction: row;
-}
-
-.wrap {
-  flex-wrap: wrap;
-}
-
 .header-h2 {
-  font-size: $font-x-large;
-  margin-top: 5.7rem;
-  font-family: $font-secondary;
-  font-weight: $font-bold;
+  font-family: $font-family-header;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
+  color: $color-header;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: rem(54);
+}
+
+.text-feature {
+  font-family: $font-family-header;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-feature;
+  line-height: 1.9;
 }
