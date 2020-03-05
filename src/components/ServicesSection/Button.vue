@@ -21,12 +21,13 @@ a {
   font-weight: $font-weight-regular;
   color: $color-light;
   background: $color-button;
+  border: 2px solid darken($color-button, 3%);
   padding: 0.75rem 2.3rem;
   border-radius: 1.9rem;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
-  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
 
   @media (min-width: $mobile-up) {
     &:hover {

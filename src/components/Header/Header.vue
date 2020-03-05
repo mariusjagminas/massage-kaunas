@@ -54,9 +54,12 @@ header {
   position: fixed;
   z-index: 1000;
   background-color: $color-background;
-
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
   @include tablet-up {
     position: relative;
+    box-shadow: none;
   }
 }
 
