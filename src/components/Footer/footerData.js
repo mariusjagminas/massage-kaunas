@@ -1,19 +1,19 @@
 export default [
   {
-    title: "Menu",
+    title: "Meniu",
     items: [
       { name: "Apie Mus", url: "#" },
       { name: "Paslaugos", url: "#" },
-      { name: "Terapija", url: "#" },
-      { name: "Kontaktas", url: "#" }
+      { name: "Nuorodos", url: "#" },
+      { name: "Kontaktai", url: "#" }
     ]
   },
   {
-    title: "Paslaugos",
+    title: "Pasiulimai",
     items: [
-      { name: "Terapija", url: "#" },
-      { name: "Masazas", url: "#" },
-      { name: "Pirtis", url: "#" }
+      { name: "Anticeliulitinis masažas", url: "#" },
+      { name: "Taškinis masažas", url: "#" },
+      { name: "Kojų masažas", url: "#" }
     ]
   },
   {

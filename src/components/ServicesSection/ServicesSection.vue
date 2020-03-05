@@ -1,7 +1,7 @@
 <template>
   <div class="service-section">
-    <h2 class="header-h2">Paslaugos</h2>
-    <p>atliekame ivairias masazo rusys</p>
+    <h2 class="header-h2">Mūsų pasiūlymai</h2>
+    <p>Pasirinkite jums tinkama masażą</p>
     <div class="wrapper">
       <Service v-for="data in serviceData" :key="data.title" :serviceData="data" />
     </div>
@@ -20,22 +20,22 @@ export default {
     return {
       serviceData: [
         {
-          title: "Gydomasis Masazas",
-          image: require("@/assets/images/hero.jpg"),
+          title: "Anticeliulitinis masažas",
+          image: require("@/assets/images/candles.jpg"),
           content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos doloreset quas molestias provident destiny is about voles."
+            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
         },
         {
-          title: "Celiulitas",
+          title: "Taškinis masažas",
           image: require("@/assets/images/hero.jpg"),
           content:
-            "reiškia skirtingus dalykus, kurie jungiasi į bendrą struktūrą ir taip formuoja unikalų miesto veidą. Atskiros struktūros dalys nėra statiškos, jos turi judėjimo kryptį – tarsi kiekvieno mūsų brėžiamos JUOSTOS laike ir erdvėje. Todėl miesto vaizdas nėra baigtinis, jis tęsiasi. Jis nuolat kinta ir stovi"
+            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
         },
         {
-          title: "Taskinis Masazas",
-          image: require("@/assets/images/hero.jpg"),
+          title: "Kojų masažas",
+          image: require("@/assets/images/bed.jpg"),
           content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos doloreset quas molestias provident destiny is about voles."
+            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
         }
       ]
     };
@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .service-section {
-  min-height: rem(1060);
+  min-height: rem(930);
   background-color: $color-light-background;
 }
 

@@ -2,8 +2,8 @@
   <div class="hero">
     <div class="cover">
       <div class="text-container">
-        <p>Masazo salonas Kaune</p>
-        <h1>Gydomasis ir relaksinis masazas</h1>
+        <p>Masažo salonas Kaune</p>
+        <h1>Gydomasis ir relaksuojantis masažas</h1>
       </div>
     </div>
   </div>

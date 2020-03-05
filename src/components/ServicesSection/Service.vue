@@ -6,7 +6,7 @@
       <h3>{{$props.serviceData.title}}</h3>
       <p class="text-feature">{{$props.serviceData.content}}</p>
     </div>
-    <Button text="Placiau" />
+    <Button text="Plačiau" />
   </div>
 </template>
 

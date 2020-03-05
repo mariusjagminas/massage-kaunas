@@ -24,10 +24,10 @@ export default {
   data() {
     return {
       items: [
-        { name: "Apie mus", path: "#" },
-        { name: "Masazas", path: "#" },
+        { name: "apie mus", path: "#" },
+        { name: "Paslaugos", path: "#" },
         { name: "Nuorodos", path: "#" },
-        { name: "Kontaktas", path: "#" }
+        { name: "Kontaktai", path: "#" }
       ]
     };
   }
