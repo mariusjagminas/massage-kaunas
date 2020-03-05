@@ -1,10 +1,10 @@
 <template>
   <div class="hero">
-    <div class="inner-container">
-      <h1>
-        Gydomasis ir Relaksinis
-        <br />Masazas
-      </h1>
+    <div class="cover">
+      <div class="text-container">
+        <p>Masazo salonas Kaune</p>
+        <h1>Gydomasis ir relaksinis masazas</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -17,27 +17,55 @@ export default {
 
 <style lang="scss" scoped>
 .hero,
-.text-container {
+.cover {
   width: 100%;
 }
 
 .hero {
-  height: 600px;
-  background: url("~@/assets/images/hero.jpg") no-repeat center;
+  height: rem(350);
+  background: url("~@/assets/images/lotus.svg") no-repeat center;
   background-size: cover;
+  position: relative;
+
+  @include tablet-up {
+    height: rem(600);
+  }
 }
 
-.inner-container {
+.cover {
+  position: absolute;
   height: 100%;
-  @include flex(center, center);
   background: rgba(243, 243, 231, 0.2);
+}
+
+.text-container {
+  height: 100%;
+  margin: 0 0 0 auto;
+  width: 100%;
+  padding-left: rem(30);
+  @include flex(center, flex-start);
+  flex-direction: column;
+
+  @include tablet-up {
+    width: 50%;
+  }
+}
+
+p {
+  font-size: $font-size-h2;
+  color: darken($color-logo, 15%);
+  border-bottom: 2px solid $color-menu-text;
+  margin-bottom: rem(8);
+  padding-bottom: rem(8);
 }
 
 h1 {
   font-family: $font-family-header;
+  font-weight: $font-weight-bold;
   font-size: $font-size-h1;
-  color: $color-light;
-  width: 30.6rem;
-  margin-left: rem(100);
+  color: $color-button;
+  text-transform: uppercase;
+  margin: 0;
 }
+// #C9B690
 </style>
