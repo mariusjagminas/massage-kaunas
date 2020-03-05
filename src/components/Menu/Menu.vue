@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{show: $props.isOpen || $props.isDesktop}">
     <ul class="container">
       <li v-for="item in items" :key="item.name">
         <a href>{{item.name}}</a>
@@ -11,12 +11,22 @@
 <script>
 export default {
   name: "Menu",
+  props: {
+    isOpen: {
+      type: Boolean,
+      required: true
+    },
+    isDesktop: {
+      type: Boolean,
+      required: true
+    }
+  },
   data() {
     return {
       items: [
         { name: "Apie mus", path: "#" },
-        { name: "Paslaugos", path: "#" },
-        { name: "Terapija", path: "#" },
+        { name: "Masazas", path: "#" },
+        { name: "Nuorodos", path: "#" },
         { name: "Kontaktas", path: "#" }
       ]
     };
@@ -26,21 +36,34 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  display: none;
+  height: auto;
+  overflow: hidden;
   background-color: $color-menu-background;
-  height: 4.31rem;
+
+  @include tablet-up {
+    height: 4.31rem;
+  }
 }
 
 ul {
   width: 100%;
   height: 100%;
   padding: 0;
-  @include flex(flex-end, center);
+  @include flex(flex-end, flex-start);
+  flex-direction: column;
+  padding: rem(20) 0;
+
+  @include tablet-up {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 li {
   list-style: none;
   padding: 0;
-  margin: 0.5rem;
+  margin: rem(15) rem(10);
 }
 
 a {
@@ -52,5 +75,9 @@ a {
   color: $color-menu-text;
   text-transform: uppercase;
   @include hover;
+}
+
+.show {
+  display: block;
 }
 </style>
