@@ -17,6 +17,7 @@ $color-menu-text: darken($grey,50%);
 $color-header: $brown;
 $color-text: lighten($brown, 45%);
 $color-button: $brown-red;
+$color-footer: darken($grey, 10%);
 
 // Fonts
 $font-family-text: 'Courgette', sans-serif;
@@ -32,14 +33,39 @@ $font-size-h1: 2.5rem; // 40px
 $font-size-h2: 1.63rem; // 26px
 $font-size-h3: 1.2rem; // 18px
 $font-size-feature: 0.88rem;// 14px
+$font-size-footer: 0.81rem; //13px
 
 // Mixins
-@mixin flex($justify-content: default, $align-items: default, $direction: row){
+@mixin flex($justify-content: default, $align-items: default){
   display: flex;
-  flex-direction: $direction;
   justify-content: $justify-content;
   align-items: $align-items
 }
+
+@mixin hover($color: $color-button){
+  transition: color 0.2s ease;
+  &:hover {
+    color: $color;
+  }
+}
+
+@mixin mobile-up {
+  @media(min-width: 400px){
+    @content
+  }
+};
+
+@mixin tablet-up {
+  @media(min-width: 720px){
+    @content
+  }
+};
+
+@mixin laptop-up {
+  @media(min-width: 1080px){
+    @content
+  }
+}; 
 
 //Functions
 @function rem($px){

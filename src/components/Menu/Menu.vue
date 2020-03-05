@@ -51,8 +51,6 @@ a {
   font-weight: $font-weight-bold;
   color: $color-menu-text;
   text-transform: uppercase;
-  &:hover {
-    opacity: 0.6;
-  }
+  @include hover;
 }
 </style>

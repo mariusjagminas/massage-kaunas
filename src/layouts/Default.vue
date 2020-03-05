@@ -2,6 +2,7 @@
   <div>
     <Header />
     <slot />
+    <Footer />
   </div>
 </template>
 
@@ -15,11 +16,13 @@ query {
 
 <script>
 import Header from "@/components/Header/Header.vue";
+import Footer from "@/components/Footer/Footer.vue";
 
 export default {
   name: "Layout",
   components: {
-    Header
+    Header,
+    Footer
   }
 };
 </script>

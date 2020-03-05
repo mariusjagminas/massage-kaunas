@@ -1,0 +1,93 @@
+<template>
+  <div class="footer">
+    <Decoration />
+    <div class="container top-section">
+      <FooterMenu v-for="menu in menuData" :key="menu.title" :menu="menu" />
+      <FooterMenu :menu="{title: 'Kontaktai'}">
+        <FooterContact />
+      </FooterMenu>
+      <div class="logo">
+        <Logo :size="42" />
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p>&copy; {{ new Date().getFullYear()}}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+import Logo from "@/components/Logo/Logo.vue";
+import Decoration from "@/components/Decoration/Decoration.vue";
+import FooterMenu from "./FooterMenu.vue";
+import FooterContact from "./FooterContact.vue";
+import menuData from "./footerData";
+
+export default {
+  name: "Footer",
+  components: {
+    Logo,
+    Decoration,
+    FooterMenu,
+    FooterContact
+  },
+  data() {
+    return {
+      menuData: menuData
+    };
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  border: 2px solid #e6e5d9; // color is the same as fill of ornament.svg
+  border-radius: rem(70);
+  background-color: $color-background;
+  width: 6.2rem;
+  height: 6.2rem;
+  position: absolute;
+  z-index: -2;
+  top: rem(-70);
+  left: calc(50% - 3.1rem);
+  @include flex(center);
+  padding-top: rem(7);
+}
+
+.top-section {
+  background-color: $color-background;
+  position: relative;
+  @include flex(flex-start);
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: rem(-28);
+    z-index: -1;
+    background-color: $color-background;
+  }
+
+  @include laptop-up {
+    min-height: rem(360);
+  }
+}
+
+.bottom-section {
+  height: rem(80);
+  background-color: $color-footer;
+  @include flex(center, center);
+}
+
+p {
+  font-family: $font-family-header;
+  color: $color-header;
+  font-weight: $font-weight-bold;
+}
+</style>
