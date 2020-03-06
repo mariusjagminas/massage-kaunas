@@ -10,7 +10,7 @@
       <linearGradient
         id="linear-gradient"
         x1="0.5"
-        y1="1"
+        y1="3"
         x2="0.5"
         gradientUnits="objectBoundingBox"
       >
@@ -27,7 +27,7 @@
         rx="7.17"
         ry="3.34"
         transform="translate(821.66 68.99)"
-        fill="#685e59"
+        fill="#685e5"
       />
       <path
         id="Shape_74"
