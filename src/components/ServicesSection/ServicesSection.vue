@@ -23,7 +23,7 @@ export default {
           title: "Anticeliulitinis masažas",
           image: require("@/assets/images/candles.jpg"),
           content:
-            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
+            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
         },
         {
           title: "Taškinis masažas",

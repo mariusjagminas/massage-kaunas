@@ -4,7 +4,7 @@
     <div class="service-container">
       <div class="ornament"></div>
       <h3>{{$props.serviceData.title}}</h3>
-      <p class="text-feature">{{$props.serviceData.content}}</p>
+      <p class="text-feature">{{$props.serviceData.content | truncate(200)}}</p>
     </div>
     <Button text="Plačiau" />
   </div>
@@ -12,6 +12,7 @@
 
 <script>
 import Button from "@/components/ServicesSection/Button.vue";
+import truncate from "@/filters/truncate.js";
 
 export default {
   name: "Service",
@@ -21,6 +22,9 @@ export default {
       type: Object,
       required: true
     }
+  },
+  filters: {
+    truncate
   }
 };
 </script>
