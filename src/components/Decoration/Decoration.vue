@@ -15,8 +15,8 @@ export default {
 <style lang="scss" scoped>
 .decoration {
   background-image: url("~@/assets/images/158428.svg");
-  background-size: 3rem;
-  height: 1.75rem;
+  background-size: rem(42);
+  height: rem(25);
 }
 
 .islarge {

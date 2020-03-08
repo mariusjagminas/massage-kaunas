@@ -2,7 +2,7 @@
   <nav :class="{show: $props.isOpen || $props.isDesktop}">
     <ul class="container">
       <li v-for="item in items" :key="item.name">
-        <a href>{{item.name}}</a>
+        <a :href="item.path">{{item.name}}</a>
       </li>
     </ul>
   </nav>
@@ -24,10 +24,9 @@ export default {
   data() {
     return {
       items: [
-        { name: "apie mus", path: "#" },
-        { name: "Paslaugos", path: "#" },
-        { name: "Nuorodos", path: "#" },
-        { name: "Kontaktai", path: "#" }
+        { name: "apie mus", path: "/" },
+        { name: "Paslaugos", path: "services" },
+        { name: "Kontaktai", path: "contact" }
       ]
     };
   }
@@ -42,7 +41,7 @@ nav {
   background-color: $color-menu-background;
 
   @include tablet-up {
-    height: 4.31rem;
+    height: rem(56);
   }
 }
 
