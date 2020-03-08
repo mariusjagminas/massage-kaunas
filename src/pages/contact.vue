@@ -1,9 +1,8 @@
 <template>
   <Layout>
-    <div class="spacer"></div>
+    <HeaderH2 title="Kontaktai" />
     <div class="contact-section">
-      <HeaderH2 title="Kontaktai" />
-      <Decoration class="top-decoration" />
+      <Decoration :large="true" />
       <address>
         <span class="phone">
           <font-awesome class="phone-icon" :icon="['fas', 'phone']" />+370 672 XX XXX
@@ -26,7 +25,7 @@ import Decoration from "@/components/Decoration/Decoration.vue";
 
 export default {
   metaInfo: {
-    title: "Masažo salonas Kaune"
+    title: "Kontaktai"
   },
   components: {
     HeaderH2,
@@ -37,18 +36,13 @@ export default {
 
 <style lang="scss" scoped>
 .contact-section {
-  background: $color-light-background;
-}
-
-.top-decoration {
-  background-color: $color-background;
+  background: $color-background;
 }
 
 address {
   @include flex(center, center);
   flex-direction: column;
   height: rem(300);
-  background: $color-background;
 }
 
 span {
@@ -81,13 +75,6 @@ span {
   margin-bottom: rem(70);
   @include tablet-up {
     margin-bottom: rem(100);
-  }
-}
-
-.spacer {
-  height: rem(55);
-  @include tablet-up {
-    display: none;
   }
 }
 </style>

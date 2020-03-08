@@ -1,16 +1,19 @@
 <template>
-  <header>
-    <button @click="toggleMenu" type="button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="top-section">
-      <Logo :size="isDesktop? 87: 45" />
-    </div>
-    <Decoration v-if="isDesktop" />
-    <Menu :isOpen="isOpen" :isDesktop="isDesktop" />
-  </header>
+  <div>
+    <header>
+      <button @click="toggleMenu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="top-section">
+        <Logo :size="isDesktop? 87: 45" />
+      </div>
+      <Decoration v-if="isDesktop" />
+      <Menu :isOpen="isOpen" :isDesktop="isDesktop" />
+    </header>
+    <div class="spacer"></div>
+  </div>
 </template>
 
 <script>
@@ -90,5 +93,12 @@ span {
 .top-section {
   padding: rem(13) 0;
   @include flex(center);
+}
+
+.spacer {
+  height: rem(55);
+  @include tablet-up {
+    display: none;
+  }
 }
 </style>

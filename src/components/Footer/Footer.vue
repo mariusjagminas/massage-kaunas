@@ -44,13 +44,13 @@ $darken: 4%;
 .footer {
   position: relative;
   z-index: 1;
-  background-color: darken($color-background, $darken);
+  background-color: $color-light-background;
 }
 
 .logo {
   border: 2px solid #deddd6; // color is the same as fill of ornament.svg
   border-radius: rem(70);
-  background-color: darken($color-background, $darken);
+  background-color: $color-light-background;
   width: 6.2rem;
   height: 6.2rem;
   position: absolute;
@@ -72,7 +72,7 @@ $darken: 4%;
     height: 100%;
     top: rem(-36);
     z-index: -1;
-    background-color: darken($color-background, $darken);
+    background-color: $color-light-background;
   }
 
   @include laptop-up {
