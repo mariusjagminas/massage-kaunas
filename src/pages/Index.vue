@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <Hero />
-    <Decoration />
     <ServicesSection />
   </Layout>
 </template>
