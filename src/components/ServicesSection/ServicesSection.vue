@@ -1,6 +1,6 @@
 <template>
   <div class="service-section">
-    <Decoration class="decoration" isLarge="true" />
+    <Decoration class="decoration" :large="true" />
     <HeaderH2 title="Mūsų pasiūlymai" subtitle="Pasirinkite jums tinkama masażą" />
     <div class="wrapper">
       <Service v-for="data in serviceData" :key="data.title" :serviceData="data" />

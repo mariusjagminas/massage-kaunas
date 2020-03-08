@@ -2,14 +2,13 @@ export default [
   {
     title: "Meniu",
     items: [
-      { name: "Apie Mus", url: "#" },
-      { name: "Paslaugos", url: "#" },
-      { name: "Nuorodos", url: "#" },
-      { name: "Kontaktai", url: "#" }
+      { name: "Apie Mus", url: "/" },
+      { name: "Paslaugos", url: "services" },
+      { name: "Kontaktai", url: "contact" }
     ]
   },
   {
-    title: "Pasiulimai",
+    title: "Paslaugos",
     items: [
       { name: "Anticeliulitinis masažas", url: "#" },
       { name: "Taškinis masažas", url: "#" },
@@ -17,7 +16,7 @@ export default [
     ]
   },
   {
-    title: "Paslaugos",
+    title: "XXXX",
     items: [
       { name: "Terapija", url: "#" },
       { name: "Masazas", url: "#" },

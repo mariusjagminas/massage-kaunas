@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <Decoration />
+    <Decoration :large="true" />
     <div class="container top-section">
       <FooterMenu v-for="menu in menuData" :key="menu.title" :menu="menu" />
       <FooterMenu :menu="{title: 'Kontaktai'}">
@@ -40,27 +40,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$darken: 4%;
 .footer {
   position: relative;
   z-index: 1;
+  background-color: darken($color-background, $darken);
 }
 
 .logo {
-  border: 2px solid #e6e5d9; // color is the same as fill of ornament.svg
+  border: 2px solid #deddd6; // color is the same as fill of ornament.svg
   border-radius: rem(70);
-  background-color: $color-background;
+  background-color: darken($color-background, $darken);
   width: 6.2rem;
   height: 6.2rem;
   position: absolute;
   z-index: -2;
-  top: rem(-70);
+  top: rem(-75);
   left: calc(50% - 3.1rem);
   @include flex(center);
   padding-top: rem(7);
 }
 
 .top-section {
-  background-color: $color-background;
   position: relative;
   @include flex(flex-start);
 
@@ -69,9 +70,9 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: rem(-28);
+    top: rem(-36);
     z-index: -1;
-    background-color: $color-background;
+    background-color: darken($color-background, $darken);
   }
 
   @include laptop-up {

@@ -1,12 +1,12 @@
 <template>
-  <div class="decoration" :class="{islarge: $props.isLarge}"></div>
+  <div class="decoration" :class="{islarge: $props.large}"></div>
 </template>
 
 <script>
 export default {
   name: "Decoration",
   props: {
-    isLarge: Boolean,
+    large: Boolean,
     default: false
   }
 };
