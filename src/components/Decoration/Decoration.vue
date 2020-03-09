@@ -14,13 +14,13 @@ export default {
 
 <style lang="scss" scoped>
 .decoration {
-  background-image: url("~@/assets/images/158428.svg");
-  background-size: rem(42);
+  background-image: url("~@/assets/images/decoration.svg");
+  background-size: rem(87);
   height: rem(25);
 }
 
 .islarge {
-  background-size: rem(64);
+  background-size: rem(130);
   height: rem(36);
 }
 </style>
