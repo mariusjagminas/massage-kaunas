@@ -40,8 +40,7 @@ export default {
 }
 
 address {
-  @include flex(center, center);
-  flex-direction: column;
+  @include flex(center, center, column);
   height: rem(300);
 }
 
@@ -55,9 +54,8 @@ span {
 }
 
 .phone {
+  @include font(null, $font-weight-bold, $font-size-h1);
   color: $color-button;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-h1;
 }
 
 .phone-icon {
@@ -66,8 +64,8 @@ span {
 }
 
 .address-line {
-  color: $color-header;
   font-size: $font-size-h2;
+  color: $color-header;
 }
 
 .map {

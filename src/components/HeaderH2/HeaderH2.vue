@@ -24,17 +24,14 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  max-width: rem(600);
+  @include container(rem(600));
   height: rem(168);
-  margin: 0 auto;
   padding: 0 rem(20);
-  @include flex(flex-start, center);
-  flex-direction: column;
+  @include flex(flex-start, center, column);
 }
 
 h2 {
-  font-family: $font-family-header;
-  font-size: $font-size-h2;
+  @include font($font-family-header, null, $font-size-h2);
   color: $color-header;
   text-transform: uppercase;
   margin-top: rem(55);

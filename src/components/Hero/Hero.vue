@@ -43,8 +43,7 @@ export default {
   margin: 0 0 0 auto;
   width: 100%;
   padding-left: rem(30);
-  @include flex(center, flex-start);
-  flex-direction: column;
+  @include flex(center, flex-start, column);
 
   @include tablet-up {
     width: 50%;
@@ -60,12 +59,9 @@ p {
 }
 
 h1 {
-  font-family: $font-family-header;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-h1;
+  @include font($font-family-header, $font-weight-bold, $font-size-h1);
   color: $color-button;
   text-transform: uppercase;
   margin: 0;
 }
-// #C9B690
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <Decoration :large="true" />
-    <div class="container top-section">
+    <div class="top-section">
       <FooterMenu v-for="menu in menuData" :key="menu.title" :menu="menu" />
       <FooterMenu :menu="{title: 'Kontaktai'}">
         <FooterContact />
@@ -40,7 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$darken: 4%;
 .footer {
   position: relative;
   z-index: 1;
@@ -63,6 +62,7 @@ $darken: 4%;
 
 .top-section {
   position: relative;
+  @include container;
   @include flex(flex-start);
 
   &:before {
@@ -87,8 +87,7 @@ $darken: 4%;
 }
 
 p {
-  font-family: $font-family-header;
+  @include font($font-family-header, $font-weight-bold);
   color: $color-header;
-  font-weight: $font-weight-bold;
 }
 </style>

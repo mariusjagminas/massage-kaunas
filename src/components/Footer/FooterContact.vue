@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 p {
-  font-family: $font-family-header;
+  @include font($font-family-header);
   color: $color-header;
   line-height: 1.8;
   margin-bottom: rem(36);
