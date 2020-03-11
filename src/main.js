@@ -17,4 +17,6 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
   // Font awesome icons
   Vue.component('font-awesome', FontAwesomeIcon)
+
+  head.meta.push({ name: "robots", content: "noindex,nofollow" })
 }
