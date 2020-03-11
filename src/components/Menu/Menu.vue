@@ -2,7 +2,7 @@
   <nav :class="{show: $props.isOpen || $props.isDesktop}">
     <ul>
       <li v-for="item in items" :key="item.name">
-        <g-link :to="item.path">{{item.name}}</g-link>
+        <a :href="item.path">{{item.name}}</a>
       </li>
     </ul>
   </nav>
@@ -25,9 +25,8 @@ export default {
     return {
       items: [
         { name: "apie mus", path: "/" },
-        { name: "paslaugos", path: "/services" },
-        { name: "kainoraštis", path: "/pricing" },
-        { name: "Kontaktai", path: "/contact" }
+        { name: "Paslaugos", path: "services" },
+        { name: "Kontaktai", path: "contact" }
       ]
     };
   }
