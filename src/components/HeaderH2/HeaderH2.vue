@@ -43,7 +43,7 @@ span {
   max-width: rem(300);
   height: rem(8);
   margin-top: rem(-11);
-  background: url("~@/assets/images/158428.svg");
+  background: url("~@/assets/images/ornament-long.svg");
   background-size: rem(14);
 }
 

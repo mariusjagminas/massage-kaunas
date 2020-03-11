@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .decoration {
-  background-image: url("~@/assets/images/decoration.svg");
+  background-image: url("~@/assets/images/ornament-long.svg");
   background-size: rem(87);
   height: rem(25);
 }

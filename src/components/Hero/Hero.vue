@@ -23,7 +23,7 @@ export default {
 
 .hero {
   height: rem(350);
-  background: url("~@/assets/images/lotus.svg") no-repeat center;
+  background: url("~@/assets/images/hero-lotus.jpg") no-repeat center;
   background-size: cover;
   position: relative;
 
