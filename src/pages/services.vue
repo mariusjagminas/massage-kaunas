@@ -1,15 +1,17 @@
 <template>
   <Layout>
-    <h1>Services</h1>
+    <ServicesSection />
   </Layout>
 </template>
 
 <script>
+import ServicesSection from "@/components/ServicesSection/ServicesSection.vue";
+
 export default {
   metaInfo: {
     title: "Paslaugos"
   },
-  components: {}
+  components: { ServicesSection }
 };
 </script >
 
