@@ -4,7 +4,7 @@
     <div class="service-container">
       <div class="ornament"></div>
       <h3>{{$props.serviceData.title}}</h3>
-      <p class="text-feature">{{$props.serviceData.content | truncate(200)}}</p>
+      <p>{{$props.serviceData.content | truncate(200)}}</p>
     </div>
     <Button text="Plačiau" />
   </div>
@@ -36,7 +36,8 @@ export default {
   position: relative;
   max-width: 21.3rem;
   margin: 10rem 0 4.3rem 0;
-  @media (min-width: $mobile-up) {
+
+  @include mobile-up {
     margin: 10rem rem(10) 4.3rem rem(10);
   }
 }
@@ -63,6 +64,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   &::after {
     content: "";
     width: 95%;
@@ -85,10 +87,13 @@ p {
 }
 
 h3 {
-  font-family: $font-family-header;
-  font-size: $font-size-h2;
-  font-weight: $font-weight-light;
+  @include font($font-family-header, $font-weight-light, $font-size-h2);
   color: $color-header;
   margin: 5.5rem 0 0 0;
+}
+
+p {
+  @include font($font-family-header, $font-weight-regular, $font-size-feature);
+  line-height: 1.9;
 }
 </style>

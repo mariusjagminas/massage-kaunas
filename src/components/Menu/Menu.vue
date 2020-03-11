@@ -1,8 +1,8 @@
 <template>
   <nav :class="{show: $props.isOpen || $props.isDesktop}">
-    <ul class="container">
+    <ul>
       <li v-for="item in items" :key="item.name">
-        <a href>{{item.name}}</a>
+        <a :href="item.path">{{item.name}}</a>
       </li>
     </ul>
   </nav>
@@ -24,10 +24,9 @@ export default {
   data() {
     return {
       items: [
-        { name: "apie mus", path: "#" },
-        { name: "Paslaugos", path: "#" },
-        { name: "Nuorodos", path: "#" },
-        { name: "Kontaktai", path: "#" }
+        { name: "apie mus", path: "/" },
+        { name: "Paslaugos", path: "services" },
+        { name: "Kontaktai", path: "contact" }
       ]
     };
   }
@@ -42,7 +41,7 @@ nav {
   background-color: $color-menu-background;
 
   @include tablet-up {
-    height: 4.31rem;
+    height: rem(56);
   }
 }
 
@@ -50,13 +49,12 @@ ul {
   width: 100%;
   height: 100%;
   padding: 0;
-  @include flex(flex-end, flex-start);
-  flex-direction: column;
+  @include container;
+  @include flex(flex-end, flex-start, column);
   padding: rem(20) 0;
 
   @include tablet-up {
-    flex-direction: row;
-    align-items: center;
+    @include flex(null, center, row);
   }
 }
 
@@ -70,8 +68,7 @@ a {
   padding: 0 0.5rem;
   display: block;
   text-decoration: none;
-  font-family: $font-family-header;
-  font-weight: $font-weight-bold;
+  @include font($font-family-header, $font-weight-bold);
   color: $color-menu-text;
   text-transform: uppercase;
   @include hover;

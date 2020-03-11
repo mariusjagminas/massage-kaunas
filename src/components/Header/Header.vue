@@ -1,16 +1,19 @@
 <template>
-  <header>
-    <button @click="toggleMenu" type="button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="top-section">
-      <Logo :size="isDesktop? 87: 45" />
-    </div>
-    <Decoration v-if="isDesktop" />
-    <Menu :isOpen="isOpen" :isDesktop="isDesktop" />
-  </header>
+  <div>
+    <header>
+      <button @click="toggleMenu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="top-section">
+        <Logo :size="isDesktop? 87: 45" />
+      </div>
+      <Decoration v-if="isDesktop" />
+      <Menu :isOpen="isOpen" :isDesktop="isDesktop" />
+    </header>
+    <div class="spacer"></div>
+  </div>
 </template>
 
 <script>
@@ -57,6 +60,7 @@ header {
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
+
   @include tablet-up {
     position: relative;
     box-shadow: none;
@@ -90,5 +94,12 @@ span {
 .top-section {
   padding: rem(13) 0;
   @include flex(center);
+}
+
+.spacer {
+  height: rem(55);
+  @include tablet-up {
+    display: none;
+  }
 }
 </style>

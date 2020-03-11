@@ -22,8 +22,7 @@ export default {
 <style lang="scss" scoped>
 .menu {
   width: 100%;
-  @include flex(center, center);
-  flex-direction: column;
+  @include flex(center, center, column);
   padding: 0 rem(20);
 
   &:nth-child(-n + 3) {
@@ -39,7 +38,7 @@ export default {
 }
 
 h5 {
-  font-size: $font-size-h3;
+  @include font(null, null, $font-size-h3);
   color: $color-button;
   margin: 0;
   padding: rem(36) 0 rem(15) 0;
@@ -57,7 +56,7 @@ li {
 
 a {
   text-decoration: none;
-  font-family: $font-family-header;
+  @include font($font-family-header);
   color: $color-header;
   @include hover;
 }

@@ -1,3 +1,4 @@
+@import 'normalize.scss';
 @import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:300,400,700&display=swap');
 
 html {
@@ -14,29 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: $color-background;
+  background-color: $color-light-background; 
   color: $color-text;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.header-h2 {
-  font-family: $font-family-header;
-  font-size: $font-size-h2;
-  font-weight: $font-weight-bold;
-  color: $color-header;
-  text-transform: uppercase;
-  margin: 0;
-  padding-top: rem(54);
-}
-
-.text-feature {
-  font-family: $font-family-header;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-feature;
-  line-height: 1.9;
 }
 

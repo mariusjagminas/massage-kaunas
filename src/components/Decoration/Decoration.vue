@@ -1,17 +1,26 @@
 <template>
-  <div class="decoration"></div>
+  <div class="decoration" :class="{islarge: $props.large}"></div>
 </template>
 
 <script>
 export default {
-  name: "Decoration"
+  name: "Decoration",
+  props: {
+    large: Boolean,
+    default: false
+  }
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .decoration {
-  background-image: url("~@/assets/images/158428.svg");
-  background-size: 3rem;
-  height: 1.75rem;
+  background-image: url("~@/assets/images/decoration.svg");
+  background-size: rem(87);
+  height: rem(25);
+}
+
+.islarge {
+  background-size: rem(130);
+  height: rem(36);
 }
 </style>

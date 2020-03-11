@@ -4,8 +4,8 @@
       <Logo :size="90" />
     </div>
     <p>
-      Vyduno al 60
-      <br />Kaunas 500-56
+      Radvilėnų pl. 17
+      <br />Kaunas
       <br />tel: +370 679 23 XXX
       <br />tel: +370 XXX XX XXX
     </p>
@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 p {
-  font-family: $font-family-header;
+  @include font($font-family-header);
   color: $color-header;
   line-height: 1.8;
   margin-bottom: rem(36);

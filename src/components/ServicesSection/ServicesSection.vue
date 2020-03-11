@@ -1,7 +1,7 @@
 <template>
   <div class="service-section">
-    <h2 class="header-h2">Mūsų pasiūlymai</h2>
-    <p>Pasirinkite jums tinkama masażą</p>
+    <Decoration class="decoration" :large="true" />
+    <HeaderH2 title="Mūsų pasiūlymai" subtitle="Pasirinkite jums tinkama masażą" />
     <div class="wrapper">
       <Service v-for="data in serviceData" :key="data.title" :serviceData="data" />
     </div>
@@ -10,34 +10,20 @@
 
 <script>
 import Service from "@/components/ServicesSection/Service.vue";
+import HeaderH2 from "@/components/HeaderH2/HeaderH2.vue";
+import serviceData from "./serviceData.js";
+import Decoration from "@/components/Decoration/Decoration.vue";
 
 export default {
   name: "ServiceSection",
   components: {
-    Service
+    Service,
+    HeaderH2,
+    Decoration
   },
   data() {
     return {
-      serviceData: [
-        {
-          title: "Anticeliulitinis masažas",
-          image: require("@/assets/images/candles.jpg"),
-          content:
-            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
-        },
-        {
-          title: "Taškinis masažas",
-          image: require("@/assets/images/hero.jpg"),
-          content:
-            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
-        },
-        {
-          title: "Kojų masažas",
-          image: require("@/assets/images/bed.jpg"),
-          content:
-            "Atpalaiduojamasis masažas mažina kūno įtampą, stresą ir gerina nuotaiką. Specialus manipuliavimo rinkinys padeda užkirsti kelią atramos Kojų masažas skatina normalų veninio kraujo ir limfos tekėjimą "
-        }
-      ]
+      serviceData: serviceData
     };
   }
 };
@@ -46,22 +32,15 @@ export default {
 <style lang="scss" scoped>
 .service-section {
   min-height: rem(930);
-  background-color: $color-light-background;
 }
 
-h2,
-p {
-  width: 100%;
-  text-align: center;
-}
-
-p {
-  padding: 0 1.5rem;
-  margin: rem(36) 0 rem(11) 0;
+.decoration {
+  margin-bottom: rem(20);
 }
 
 .wrapper {
   @include flex(center);
   flex-wrap: wrap;
+  margin-top: rem(-32);
 }
 </style>

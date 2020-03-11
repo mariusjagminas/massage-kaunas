@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
-    <Decoration />
-    <div class="container top-section">
+    <Decoration :large="true" />
+    <div class="top-section">
       <FooterMenu v-for="menu in menuData" :key="menu.title" :menu="menu" />
       <FooterMenu :menu="{title: 'Kontaktai'}">
         <FooterContact />
@@ -43,25 +43,26 @@ export default {
 .footer {
   position: relative;
   z-index: 1;
+  background-color: $color-light-background;
 }
 
 .logo {
-  border: 2px solid #e6e5d9; // color is the same as fill of ornament.svg
+  border: 2px solid #deddd6; // color is the same as fill of ornament.svg
   border-radius: rem(70);
-  background-color: $color-background;
+  background-color: $color-light-background;
   width: 6.2rem;
   height: 6.2rem;
   position: absolute;
   z-index: -2;
-  top: rem(-70);
+  top: rem(-75);
   left: calc(50% - 3.1rem);
   @include flex(center);
   padding-top: rem(7);
 }
 
 .top-section {
-  background-color: $color-background;
   position: relative;
+  @include container;
   @include flex(flex-start);
 
   &:before {
@@ -69,9 +70,9 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: rem(-28);
+    top: rem(-36);
     z-index: -1;
-    background-color: $color-background;
+    background-color: $color-light-background;
   }
 
   @include laptop-up {
@@ -86,8 +87,7 @@ export default {
 }
 
 p {
-  font-family: $font-family-header;
+  @include font($font-family-header, $font-weight-bold);
   color: $color-header;
-  font-weight: $font-weight-bold;
 }
 </style>
