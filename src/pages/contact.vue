@@ -13,7 +13,7 @@
         <span class="address-line">Radvilėnų pl. 17</span>
         <span class="address-line">Kaunas</span>
       </address>
-      <g-image src="~/assets/images/map.jpg" alt="map" class="map" background="red" />
+      <div class="map" />
     </div>
   </Layout>
 </template>
@@ -70,9 +70,13 @@ span {
 
 .map {
   width: 100%;
+  height: rem(350);
+  background: url("~@/assets/images/map.jpg") no-repeat center;
+  background-size: cover;
   margin-bottom: rem(70);
   @include tablet-up {
     margin-bottom: rem(100);
+    height: rem(600);
   }
 }
 </style>
