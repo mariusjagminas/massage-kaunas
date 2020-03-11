@@ -46,7 +46,7 @@ export default {
   height: 25rem;
   margin-bottom: rem(35);
   position: relative;
-  background: $color-background;
+  background: $color-light-background;
 }
 
 .circle-wrapper {

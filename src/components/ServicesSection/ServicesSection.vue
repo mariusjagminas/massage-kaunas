@@ -1,7 +1,7 @@
 <template>
-  <div class="service-section">
+  <div>
+    <HeaderH2 title="Paslaugos" subtitle="Pasirinkite jums tinkama masażą" />
     <Decoration class="decoration" :large="true" />
-    <HeaderH2 title="Mūsų pasiūlymai" subtitle="Pasirinkite jums tinkama masażą" />
     <div class="wrapper">
       <Service v-for="data in serviceData" :key="data.title" :serviceData="data" />
     </div>
@@ -30,17 +30,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.service-section {
-  min-height: rem(930);
-}
-
 .decoration {
-  margin-bottom: rem(20);
+  background-color: $color-background;
 }
 
 .wrapper {
+  background-color: $color-background;
   @include flex(center);
   flex-wrap: wrap;
-  margin-top: rem(-32);
+  padding-bottom: rem(30);
+
+  @include laptop-up {
+    padding: rem(40) 0;
+  }
 }
 </style>
