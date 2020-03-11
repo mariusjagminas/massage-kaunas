@@ -54,8 +54,12 @@ a {
 p,
 h1 {
   color: $color-button;
-}
+  font-size: 10px;
 
+  @include tablet-up {
+    font-size: 40px;
+  }
+}
 p {
   font-size: rem(60);
   margin: 0;

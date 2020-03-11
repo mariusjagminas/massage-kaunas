@@ -47,6 +47,11 @@ a {
 p,
 h1 {
   color: $color-button;
+  font-size: 20px;
+
+  @include tablet-up {
+    font-size: 40px;
+  }
 }
 
 p {
