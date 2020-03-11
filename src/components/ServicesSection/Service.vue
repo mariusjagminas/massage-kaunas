@@ -75,7 +75,7 @@ export default {
 }
 
 .ornament {
-  background: url("~@/assets/images/ornament.svg") no-repeat center;
+  background: url("~@/assets/images/ornament-short.svg") no-repeat center;
   width: 100%;
   height: 3.43rem;
 }

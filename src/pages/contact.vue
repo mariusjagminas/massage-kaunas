@@ -13,7 +13,7 @@
         <span class="address-line">Radvilėnų pl. 17</span>
         <span class="address-line">Kaunas</span>
       </address>
-      <g-image src="~/assets/images/map.png" alt="map" class="map" background="red" />
+      <g-image src="~/assets/images/map.jpg" alt="map" class="map" background="red" />
     </div>
   </Layout>
 </template>
