@@ -6,7 +6,7 @@
       <h3>{{$props.serviceData.title}}</h3>
       <p>{{$props.serviceData.content | truncate(200)}}</p>
     </div>
-    <Button text="Plačiau" />
+    <Button to="/service-1" text="Plačiau" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <a href="#">{{$props.text}}</a>
+  <g-link class="link" :to="$props.to">{{$props.text}}</g-link>
 </template>
 
 <script>
@@ -9,13 +9,17 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    to: {
+      type: String,
+      required: true
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-a {
+.link {
   text-decoration: none;
   @include font($font-family-header, $font-weight-regular);
   padding: 0.75rem 2.3rem;
