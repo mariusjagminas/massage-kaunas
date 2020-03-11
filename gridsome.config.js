@@ -11,7 +11,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Masažo salonas Kaune',
+  siteName: 'Masažas',
   plugins: [],
   chainWebpack(config) {
     // Load variables for all vue-files
