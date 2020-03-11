@@ -1,14 +1,14 @@
 <template>
   <Layout>
     <Hero />
-    <ServicesSection />
+    <AboutUs />
   </Layout>
 </template>
 
 <script>
 import Hero from "@/components/Hero/Hero.vue";
 import Decoration from "@/components/Decoration/Decoration.vue";
-import ServicesSection from "@/components/ServicesSection/ServicesSection.vue";
+import AboutUs from "@/components/AboutUs/AboutUs.vue";
 
 export default {
   metaInfo: {
@@ -17,7 +17,7 @@ export default {
   components: {
     Hero,
     Decoration,
-    ServicesSection
+    AboutUs
   }
 };
 </script >
