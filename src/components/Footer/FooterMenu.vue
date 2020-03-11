@@ -4,7 +4,7 @@
     <slot />
     <ul>
       <li v-for="item in menu.items" :key="item.name">
-        <a :href="item.url">{{item.name}}</a>
+        <g-link :to="item.url">{{item.name}}</g-link>
       </li>
     </ul>
   </div>
