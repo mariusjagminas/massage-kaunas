@@ -1,6 +1,18 @@
 <template>
   <nav :class="{show: $props.isOpen || $props.isDesktop}">
     <ul>
+      <li>
+        <!-- <iframe
+          src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmasazas.netlify.com%2F&layout=button&size=small&width=67&height=20&appId"
+          width="67"
+          height="20"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>-->
+      </li>
       <li v-for="item in items" :key="item.name">
         <g-link exact-active-class="active-link" :to="item.path">{{item.name}}</g-link>
       </li>
@@ -63,6 +75,10 @@ li {
   list-style: none;
   padding: 0;
   margin: rem(15) rem(10);
+
+  &:first-child {
+    margin: rem(7) auto 0 0;
+  }
 }
 
 a {
