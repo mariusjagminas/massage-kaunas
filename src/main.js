@@ -19,4 +19,12 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('font-awesome', FontAwesomeIcon)
 
   head.meta.push({ name: "robots", content: "noindex,nofollow" })
+
+  // https://developers.facebook.com/docs/plugins/share-button/#
+
+  // head.meta.push({ name: "og:url", content: "https://masazas.netlify.com/" })
+  // head.meta.push({ name: "og:type", content: "website" })
+  // head.meta.push({ name: "og:title", content: "Masažo salonas Kaune" })
+  // head.meta.push({ name: "og:description", content: "Gydomasis ir relaksuojantis masažas" })
+  // head.meta.push({ name: "og:image", content: "https://masazas.netlify.com/assets/img/candles.c904d0d5.jpg" })
 }
